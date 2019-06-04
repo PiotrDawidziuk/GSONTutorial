@@ -15,15 +15,19 @@ public class MainActivity extends AppCompatActivity {
 
         Gson gson = new Gson();
 
-        /*
-        Employee employee = new Employee("John",30,"john@gmail.com");
-        String json = gson.toJson(employee);
-        Log.e("JSON TEXT", json);
-        */
+       // Address address = new Address("Berlin","Germany");
 
-        String json = "{\"age\":30,\"firstName\":\"John\",\"mail\":\"john@gmail.com\"}";
+//        Employee employee = new Employee("John",30,"john@gmail.com",address);
+//        String json = gson.toJson(employee);
+//        Log.e("JSON TEXT", json);
+
+
+        String json = "{\"address\":{\"city\":\"Berlin\",\"country\":\"Germany\"},\"age\":30,\"first_name\":\"John\",\"mail\":\"john@gmail.com\"}";
         Employee employee = gson.fromJson(json,Employee.class);
-        Log.e("Employee",employee.getFirstName()+" "+employee.getMail()+" "+employee.getAge());
+        Address address = employee.getmAddress();
+        Log.e("ADDRESS",address.getmCountry()+", "+address.getmCity());
+
+
 
     }
 }
