@@ -1,0 +1,45 @@
+{
+  "buttonStart": "",
+  "shareTitle": "",
+  "questions": 10,
+  "createdAt": "2019-05-21T15:11:24+0000",
+  "sponsored": false,
+  "categories": [
+    {
+      "uid": 5796577556267201,
+      "secondaryCid": "IAB1-5",
+      "name": "Movies",
+      "type": "category"
+    }
+  ],
+  "id": 6383417279743617,
+  "title": "\"Kochaj albo rzu\u0107\": przekonaj si\u0119, ile wiesz o kultowej polskiej komedii",
+  "type": "KNOWLEDGE",
+  "content": "21 maja Sylwester Ch\u0119ci\u0144ski sko\u0144czy\u0142 89 lat. Z okazji urodzin s\u0142ynnego filmowca przygotowali\u015bmy quiz z pytaniami o najpopularniejszy z nakr\u0119conych przez niego film\u00f3w.",
+  "mainPhoto": {
+    "author": "",
+    "width": 1153,
+    "source": "Filmpolski.pl",
+    "title": "",
+    "url": "https:\/\/d.wpimg.pl\/208515430--624949398\/kochaj-albo-rzuc.jpg",
+    "height": 680
+  },
+  "tags": [
+    {
+      "uid": 6024135831176321,
+      "name": "sylwester ch\u0119ci\u0144ski",
+      "type": "tag",
+      "primary": false
+    },
+    {
+      "uid": 6023763633992321,
+      "name": "kochaj albo rzu\u0107",
+      "type": "tag",
+      "primary": false
+    }
+  ],
+  "category": {
+    "id": 15,
+    "name": "film"
+  }
+}

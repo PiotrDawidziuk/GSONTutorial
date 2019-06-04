@@ -2,6 +2,8 @@ package pl.piotrdawidziuk.gsontutorial;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class Employee {
 
     @SerializedName("first_name")
@@ -12,13 +14,23 @@ public class Employee {
     private String mMail;
     @SerializedName("address")
     private Address mAddress;
+    @SerializedName("family")
+    private List<FamilyMember> mFamily;
 
-
-    public Employee(String firstName, int age, String mail,Address address) {
+    public Employee(String firstName, int age, String mail, Address address, List<FamilyMember> family) {
         mFirstName = firstName;
         mAge = age;
         mMail = mail;
         mAddress = address;
+        mFamily = family;
+    }
+
+    public List<FamilyMember> getmFamily() {
+        return mFamily;
+    }
+
+    public void setmFamily(List<FamilyMember> mFamily) {
+        this.mFamily = mFamily;
     }
 
     public String getmFirstName() {
