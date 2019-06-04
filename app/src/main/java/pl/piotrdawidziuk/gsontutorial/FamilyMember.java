@@ -28,4 +28,12 @@ public class FamilyMember {
     public void setmAge(int mAge) {
         this.mAge = mAge;
     }
+
+    @Override
+    public String toString() {
+        return "FamilyMember{" +
+                "mRole='" + mRole + '\'' +
+                ", mAge=" + mAge +
+                '}';
+    }
 }

@@ -38,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
             Log.e("Family member: ", familyMember.getmRole()+" "+familyMember.getmAge());
         }
 
+        String jsonFamily = "[{\"age\":30,\"role\":\"wife\"},{\"age\":34,\"role\":\"brother\"},{\"age\":5,\"role\":\"son\"}]";
+        FamilyMember[] familyMembers = gson.fromJson(jsonFamily,FamilyMember[].class);
+        for (FamilyMember familyMember : familyMembers){
+            Log.i("MEMBER: ", familyMember.toString());
+        }
+
+
 
 
     }
