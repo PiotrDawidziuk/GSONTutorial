@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Gson gson = new Gson();
+        /*
 
 //        Address address = new Address("Berlin","Germany");
 //
@@ -49,7 +50,10 @@ public class MainActivity extends AppCompatActivity {
             Log.e("MEMBER: ", familyMember.toString());
         }
 
+*/
+        User user = new User("Jon", "jon@jon.com",34,"jon123");
 
+        String jsonResult = gson.toJson(user);
 
 
     }
