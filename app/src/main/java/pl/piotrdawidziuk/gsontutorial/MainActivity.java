@@ -18,22 +18,25 @@ public class MainActivity extends AppCompatActivity {
 
         Gson gson = new Gson();
 
-        Address address = new Address("Berlin","Germany");
+//        Address address = new Address("Berlin","Germany");
+//
+//        List<FamilyMember> family = new ArrayList<>();
+//        family.add(new FamilyMember("wife",30));
+//        family.add(new FamilyMember("brother",34));
+//        family.add(new FamilyMember("son",5));
+//
+//        Employee employee = new Employee("John",30,"john@gmail.com",address,family);
+//        String json = gson.toJson(employee);
+//        Log.e("JSON TEXT", json);
 
-        List<FamilyMember> family = new ArrayList<>();
-        family.add(new FamilyMember("wife",30));
-        family.add(new FamilyMember("brother",34));
-        family.add(new FamilyMember("son",5));
 
-        Employee employee = new Employee("John",30,"john@gmail.com",address,family);
-        String json = gson.toJson(employee);
-        Log.e("JSON TEXT", json);
-
-
-//        String json = "{\"address\":{\"city\":\"Berlin\",\"country\":\"Germany\"},\"age\":30,\"first_name\":\"John\",\"mail\":\"john@gmail.com\"}";
-//        Employee employee = gson.fromJson(json,Employee.class);
-//        Address address = employee.getmAddress();
-//        Log.e("ADDRESS",address.getmCountry()+", "+address.getmCity());
+        String json = "{\"address\":{\"city\":\"Berlin\",\"country\":\"Germany\"},\"age\":30,\"family\":[{\"age\":30,\"role\":\"wife\"},{\"age\":34,\"role\":\"brother\"},{\"age\":5,\"role\":\"son\"}],\"first_name\":\"John\",\"mail\":\"john@gmail.com\"}\n";
+        Employee employee = gson.fromJson(json,Employee.class);
+        Address address = employee.getmAddress();
+        Log.e("ADDRESS",address.getmCountry()+", "+address.getmCity());
+        for (FamilyMember familyMember: employee.getmFamily()){
+            Log.e("Family member: ", familyMember.getmRole()+" "+familyMember.getmAge());
+        }
 
 
 

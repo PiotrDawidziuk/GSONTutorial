@@ -12,4 +12,20 @@ public class FamilyMember {
         mRole = role;
         mAge = age;
     }
+
+    public String getmRole() {
+        return mRole;
+    }
+
+    public void setmRole(String mRole) {
+        this.mRole = mRole;
+    }
+
+    public int getmAge() {
+        return mAge;
+    }
+
+    public void setmAge(int mAge) {
+        this.mAge = mAge;
+    }
 }
