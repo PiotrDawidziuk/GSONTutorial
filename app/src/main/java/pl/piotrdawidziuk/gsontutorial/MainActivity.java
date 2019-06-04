@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,9 +41,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         String jsonFamily = "[{\"age\":30,\"role\":\"wife\"},{\"age\":34,\"role\":\"brother\"},{\"age\":5,\"role\":\"son\"}]";
+
+        Type familyType = new TypeToken<ArrayList<FamilyMember>>(){}.getType();
         FamilyMember[] familyMembers = gson.fromJson(jsonFamily,FamilyMember[].class);
-        for (FamilyMember familyMember : familyMembers){
-            Log.i("MEMBER: ", familyMember.toString());
+        ArrayList<FamilyMember> familyMemberArrayList = gson.fromJson(jsonFamily,familyType);
+        for (FamilyMember familyMember : familyMemberArrayList){
+            Log.e("MEMBER: ", familyMember.toString());
         }
 
 
