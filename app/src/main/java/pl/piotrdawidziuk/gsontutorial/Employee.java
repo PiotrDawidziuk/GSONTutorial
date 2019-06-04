@@ -1,37 +1,55 @@
 package pl.piotrdawidziuk.gsontutorial;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Employee {
-    private String firstName;
-    private int age;
-    private String mail;
 
-    public Employee(String firstName, int age, String mail) {
-        this.firstName = firstName;
-        this.age = age;
-        this.mail = mail;
+    @SerializedName("first_name")
+    private String mFirstName;
+    @SerializedName("age")
+    private int mAge;
+    @SerializedName("mail")
+    private String mMail;
+    @SerializedName("address")
+    private Address mAddress;
+
+
+    public Employee(String firstName, int age, String mail,Address address) {
+        mFirstName = firstName;
+        mAge = age;
+        mMail = mail;
+        mAddress = address;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getmFirstName() {
+        return mFirstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setmFirstName(String mFirstName) {
+        this.mFirstName = mFirstName;
     }
 
-    public int getAge() {
-        return age;
+    public int getmAge() {
+        return mAge;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setmAge(int mAge) {
+        this.mAge = mAge;
     }
 
-    public String getMail() {
-        return mail;
+    public String getmMail() {
+        return mMail;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setmMail(String mMail) {
+        this.mMail = mMail;
+    }
+
+    public Address getmAddress() {
+        return mAddress;
+    }
+
+    public void setmAddress(Address mAddress) {
+        this.mAddress = mAddress;
     }
 }
