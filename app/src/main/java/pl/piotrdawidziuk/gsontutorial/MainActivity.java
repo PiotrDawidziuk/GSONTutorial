@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Gson gson = new Gson();
+        Gson gsonBuilder = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
         /*
 
 //        Address address = new Address("Berlin","Germany");
@@ -53,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
 */
         User user = new User("Jon", "jon@jon.com",34,"jon123");
 
-        String jsonResult = gson.toJson(user);
+        String jsonResult = gsonBuilder.toJson(user);
+
+        Log.e("USER: ",jsonResult);
 
 
     }
